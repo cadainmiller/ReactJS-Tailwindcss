@@ -107,44 +107,74 @@ export default function NavBar() {
                 </svg>
               </button>
               <div className="hidden lg:flex items-center">
-                <span className="text-base font-normal text-gray-500 mr-5">
-                  Open source ❤️
-                </span>
-                <div className="-mb-1">
-                  <a
-                    className="github-button"
-                    href="https://github.com/themesberg/windster-tailwind-css-dashboard"
-                    data-color-scheme="no-preference: dark; light: light; dark: light;"
-                    data-icon="octicon-star"
-                    data-size="large"
-                    data-show-count="true"
-                    aria-label="Star themesberg/windster-tailwind-css-dashboard on GitHub"
-                  >
-                    Star
-                  </a>
+                <button
+                  type="button"
+                  className="mr-3 md:mr-0 flex text-sm rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                  id="user-menu-button"
+                  aria-expanded="false"
+                  data-dropdown-toggle="dropdownDivider"
+                >
+                  <input
+                    className="h-8 w-8 rounded-full"
+                    type="image"
+                    img="true"
+                    src={
+                      "https://demo.themesberg.com/windster/images/users/thomas-lean.png"
+                    }
+                    alt="user photo"
+                  />
+                  <span className="text-xl ml-2">John Doe</span>
+                </button>
+
+                <div
+                  className="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4 dark:bg-gray-700 dark:divide-gray-600"
+                  id="dropdownDivider"
+                >
+                  <div className="px-4 py-3">
+                    <span className="text-gray-900 block text-sm dark:text-white">
+                      Bonnie Green
+                    </span>
+                    <span className="text-gray-500 block text-sm font-medium truncate dark:text-gray-400">
+                      name@flowbite.com
+                    </span>
+                  </div>
+                  <ul className="py-1" aria-labelledby="dropdownDivider">
+                    <li>
+                      <a
+                        href="/"
+                        className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                      >
+                        Dashboarddd
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/"
+                        className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                      >
+                        Settings
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/"
+                        className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                      >
+                        Earnings
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/"
+                        className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                      >
+                        Sign out
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <a
-                href="https://demo.themesberg.com/windster/pricing/"
-                className="hidden sm:inline-flex ml-5 text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center mr-3"
-              >
-                <svg
-                  className="svg-inline--fa fa-gem -ml-1 mr-2 h-4 w-4"
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fas"
-                  data-icon="gem"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M378.7 32H133.3L256 182.7L378.7 32zM512 192l-107.4-141.3L289.6 192H512zM107.4 50.67L0 192h222.4L107.4 50.67zM244.3 474.9C247.3 478.2 251.6 480 256 480s8.653-1.828 11.67-5.062L510.6 224H1.365L244.3 474.9z"
-                  ></path>
-                </svg>
-                Upgrade to Pro
-              </a>
+              {/* CaN Add Profile Image Here */}
             </div>
           </div>
         </div>

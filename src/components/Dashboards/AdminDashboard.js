@@ -4,7 +4,7 @@ import NavBar from "../Shared/NavBar";
 import SideBar from "../Shared/SideBar";
 import MainBody from "../Shared/MainBody";
 
-export default function AdminDashboard() {
+export default function AdminDashboard({ page }) {
   return (
     <div>
       <NavBar />
@@ -28,7 +28,7 @@ export default function AdminDashboard() {
           id="main-content"
           className="h-full w-full bg-gray-50 relative overflow-y-auto lg:ml-64"
         >
-          <MainBody />
+          <MainBody page={page} />
           <Footer />
         </div>
       </div>
