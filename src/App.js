@@ -7,7 +7,7 @@ import "./assets/css/bootstrap.min.css";
 function App() {
   const token = TokenService.getToken();
 
-  if (token) {
+  if (!token) {
     return (
       <div className="App">
         <AdminDashboard />
